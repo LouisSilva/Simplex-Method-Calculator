@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "CMakeTarget::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-CMakeTarget-Debug-743e3e437b0134585bac.json",
+					"jsonFile" : "target-CMakeTarget-Debug-639847d53ff574d91687.json",
 					"name" : "CMakeTarget",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/root/Simplex Method Calculator/out/build/x64-debug",
-		"source" : "C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/root/Simplex Method Calculator"
+		"build" : "C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/out/build/x64-debug",
+		"source" : "C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator"
 	},
 	"version" : 
 	{

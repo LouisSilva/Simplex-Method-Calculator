@@ -47,7 +47,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\louis\ProgrammingProjects\SimplexMethodCalculator\root\Simplex Method Calculator" -B"C:\Users\louis\ProgrammingProjects\SimplexMethodCalculator\root\Simplex Method Calculator\out\build\x64-debug"
+  command = "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\louis\ProgrammingProjects\SimplexMethodCalculator -BC:\Users\louis\ProgrammingProjects\SimplexMethodCalculator\out\build\x64-debug
   description = Re-running CMake...
   generator = 1
 

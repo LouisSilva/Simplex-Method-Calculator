@@ -39,7 +39,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/root/Simplex Method Calculator/out/build/x64-debug"
+			"value" : "c:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/out/build/x64-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -467,7 +467,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/root/Simplex Method Calculator/out/build/x64-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/out/build/x64-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -527,7 +527,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/root/Simplex Method Calculator"
+			"value" : "C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/root/Simplex Method Calculator/out/install/x64-debug"
+			"value" : "C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/out/install/x64-debug"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -1075,7 +1075,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/root/Simplex Method Calculator/out/build/x64-debug"
+			"value" : "C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/out/build/x64-debug"
 		},
 		{
 			"name" : "Simplex Method Calculator_IS_TOP_LEVEL",
@@ -1099,7 +1099,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/root/Simplex Method Calculator"
+			"value" : "C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator"
 		}
 	],
 	"kind" : "cache",
