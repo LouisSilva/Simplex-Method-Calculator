@@ -1,3 +1,0 @@
-C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/root/Simplex Method Calculator/out/build/x64-debug/CMakeFiles/CMakeTarget.dir
-C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/root/Simplex Method Calculator/out/build/x64-debug/CMakeFiles/edit_cache.dir
-C:/Users/louis/ProgrammingProjects/SimplexMethodCalculator/root/Simplex Method Calculator/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
