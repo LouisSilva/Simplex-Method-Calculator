@@ -1,0 +1,14 @@
+# ninja log v5
+1	967	6970769148309096	CMakeFiles/CMakeTarget.dir/main.cpp.obj	f6f168173eaf4263
+4	1535	6970769153974246	fmt/CMakeFiles/fmt.dir/src/format.cc.obj	9fec8dd26817696
+6	2046	6970769159068869	fmt/CMakeFiles/fmt.dir/src/os.cc.obj	dba4dfc90ac4cfd0
+2047	2391	6970769162561929	fmt/libfmtd.a	ba6df4a2bb3158d4
+2391	2784	6970769166460067	CMakeTarget.exe	e317bc671d9875b0
+2	772	6970769565953385	CMakeFiles/CMakeTarget.dir/main.cpp.obj	f6f168173eaf4263
+772	1091	6970769569136273	CMakeTarget.exe	e317bc671d9875b0
+2	794	6970789607809210	CMakeFiles/CMakeTarget.dir/main.cpp.obj	f6f168173eaf4263
+794	1111	6970789610952552	CMakeTarget.exe	e317bc671d9875b0
+3	775	6970791359919488	CMakeFiles/CMakeTarget.dir/main.cpp.obj	f6f168173eaf4263
+775	1102	6970791363172444	CMakeTarget.exe	e317bc671d9875b0
+2	784	6970792469896519	CMakeFiles/CMakeTarget.dir/main.cpp.obj	f6f168173eaf4263
+785	1103	6970792473065971	CMakeTarget.exe	e317bc671d9875b0
