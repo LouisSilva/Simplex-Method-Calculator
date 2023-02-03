@@ -38,9 +38,8 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("C:/Users/Louis/CLionProjects/Simplex-Method-Calculator/cmake-build-debug/fmt/cmake_install.cmake")
-
+  # Include the install script for the subdirectory.
+  include("C:/Users/Louis/CLionProjects/Simplex-Method-Calculator/cmake-build-debug/_deps/fmt-build/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

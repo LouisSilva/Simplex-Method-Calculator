@@ -1,9 +1,6 @@
 "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.3.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\Louis\CLionProjects\Simplex-Method-Calculator -B C:\Users\Louis\CLionProjects\Simplex-Method-Calculator\cmake-build-debug
--- Module support is disabled.
--- Version: 9.1.0
+-- Version: 9.1.1
 -- Build type: Debug
--- CXX_STANDARD: 11
--- Required features: cxx_variadic_templates
 -- Configuring done
 -- Generating done
 -- Build files have been written to: C:/Users/Louis/CLionProjects/Simplex-Method-Calculator/cmake-build-debug

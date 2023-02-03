@@ -1,4 +1,5 @@
 #include "SimplexCalc.h"
+#define FMT_HEADER_ONLY
 
 #include <vector>
 #include <string>

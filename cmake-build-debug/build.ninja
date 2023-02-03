@@ -47,12 +47,12 @@ cmake_ninja_workdir = C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/cm
 #############################################
 # Order-only phony target for CMakeTarget
 
-build cmake_object_order_depends_target_CMakeTarget: phony || cmake_object_order_depends_target_fmt
+build cmake_object_order_depends_target_CMakeTarget: phony || CMakeFiles/CMakeTarget.dir
 
 build CMakeFiles/CMakeTarget.dir/main.cpp.obj: CXX_COMPILER__CMakeTarget_Debug C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/main.cpp || cmake_object_order_depends_target_CMakeTarget
   DEP_FILE = CMakeFiles\CMakeTarget.dir\main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
-  INCLUDES = -IC:/Users/Louis/CLionProjects/Simplex-Method-Calculator/fmt/include
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Louis/CLionProjects/Simplex-Method-Calculator/include
   OBJECT_DIR = CMakeFiles\CMakeTarget.dir
   OBJECT_FILE_DIR = CMakeFiles\CMakeTarget.dir
 
@@ -64,9 +64,9 @@ build CMakeFiles/CMakeTarget.dir/main.cpp.obj: CXX_COMPILER__CMakeTarget_Debug C
 #############################################
 # Link the executable CMakeTarget.exe
 
-build CMakeTarget.exe: CXX_EXECUTABLE_LINKER__CMakeTarget_Debug CMakeFiles/CMakeTarget.dir/main.cpp.obj | fmt/libfmtd.a || fmt/libfmtd.a
+build CMakeTarget.exe: CXX_EXECUTABLE_LINKER__CMakeTarget_Debug CMakeFiles/CMakeTarget.dir/main.cpp.obj
   FLAGS = -g
-  LINK_LIBRARIES = fmt/libfmtd.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\CMakeTarget.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -109,21 +109,21 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Order-only phony target for fmt
 
-build cmake_object_order_depends_target_fmt: phony || fmt/CMakeFiles/fmt.dir
+build cmake_object_order_depends_target_fmt: phony || _deps/fmt-build/CMakeFiles/fmt.dir
 
-build fmt/CMakeFiles/fmt.dir/src/format.cc.obj: CXX_COMPILER__fmt_Debug C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/fmt/src/format.cc || cmake_object_order_depends_target_fmt
-  DEP_FILE = fmt\CMakeFiles\fmt.dir\src\format.cc.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++11
-  INCLUDES = -IC:/Users/Louis/CLionProjects/Simplex-Method-Calculator/fmt/include
-  OBJECT_DIR = fmt\CMakeFiles\fmt.dir
-  OBJECT_FILE_DIR = fmt\CMakeFiles\fmt.dir\src
+build _deps/fmt-build/CMakeFiles/fmt.dir/src/format.cc.obj: CXX_COMPILER__fmt_Debug C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/cmake-build-debug/_deps/fmt-src/src/format.cc || cmake_object_order_depends_target_fmt
+  DEP_FILE = _deps\fmt-build\CMakeFiles\fmt.dir\src\format.cc.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=c++20
+  INCLUDES = -IC:/Users/Louis/CLionProjects/Simplex-Method-Calculator/cmake-build-debug/_deps/fmt-src/include
+  OBJECT_DIR = _deps\fmt-build\CMakeFiles\fmt.dir
+  OBJECT_FILE_DIR = _deps\fmt-build\CMakeFiles\fmt.dir\src
 
-build fmt/CMakeFiles/fmt.dir/src/os.cc.obj: CXX_COMPILER__fmt_Debug C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/fmt/src/os.cc || cmake_object_order_depends_target_fmt
-  DEP_FILE = fmt\CMakeFiles\fmt.dir\src\os.cc.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++11
-  INCLUDES = -IC:/Users/Louis/CLionProjects/Simplex-Method-Calculator/fmt/include
-  OBJECT_DIR = fmt\CMakeFiles\fmt.dir
-  OBJECT_FILE_DIR = fmt\CMakeFiles\fmt.dir\src
+build _deps/fmt-build/CMakeFiles/fmt.dir/src/os.cc.obj: CXX_COMPILER__fmt_Debug C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/cmake-build-debug/_deps/fmt-src/src/os.cc || cmake_object_order_depends_target_fmt
+  DEP_FILE = _deps\fmt-build\CMakeFiles\fmt.dir\src\os.cc.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=c++20
+  INCLUDES = -IC:/Users/Louis/CLionProjects/Simplex-Method-Calculator/cmake-build-debug/_deps/fmt-src/include
+  OBJECT_DIR = _deps\fmt-build\CMakeFiles\fmt.dir
+  OBJECT_FILE_DIR = _deps\fmt-build\CMakeFiles\fmt.dir\src
 
 
 # =============================================================================
@@ -131,47 +131,47 @@ build fmt/CMakeFiles/fmt.dir/src/os.cc.obj: CXX_COMPILER__fmt_Debug C$:/Users/Lo
 
 
 #############################################
-# Link the static library fmt\libfmtd.a
+# Link the static library _deps\fmt-build\libfmtd.a
 
-build fmt/libfmtd.a: CXX_STATIC_LIBRARY_LINKER__fmt_Debug fmt/CMakeFiles/fmt.dir/src/format.cc.obj fmt/CMakeFiles/fmt.dir/src/os.cc.obj
+build _deps/fmt-build/libfmtd.a: CXX_STATIC_LIBRARY_LINKER__fmt_Debug _deps/fmt-build/CMakeFiles/fmt.dir/src/format.cc.obj _deps/fmt-build/CMakeFiles/fmt.dir/src/os.cc.obj
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = fmt\CMakeFiles\fmt.dir
+  OBJECT_DIR = _deps\fmt-build\CMakeFiles\fmt.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = fmt\libfmtd.a
+  TARGET_FILE = _deps\fmt-build\libfmtd.a
   TARGET_PDB = fmtd.a.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
-build fmt/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Louis\CLionProjects\Simplex-Method-Calculator\cmake-build-debug\fmt && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+build _deps/fmt-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\Louis\CLionProjects\Simplex-Method-Calculator\cmake-build-debug\_deps\fmt-build && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build fmt/edit_cache: phony fmt/CMakeFiles/edit_cache.util
+build _deps/fmt-build/edit_cache: phony _deps/fmt-build/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build fmt/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Louis\CLionProjects\Simplex-Method-Calculator\cmake-build-debug\fmt && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\Louis\CLionProjects\Simplex-Method-Calculator -BC:\Users\Louis\CLionProjects\Simplex-Method-Calculator\cmake-build-debug"
+build _deps/fmt-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\Louis\CLionProjects\Simplex-Method-Calculator\cmake-build-debug\_deps\fmt-build && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\Louis\CLionProjects\Simplex-Method-Calculator -BC:\Users\Louis\CLionProjects\Simplex-Method-Calculator\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build fmt/rebuild_cache: phony fmt/CMakeFiles/rebuild_cache.util
+build _deps/fmt-build/rebuild_cache: phony _deps/fmt-build/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Target aliases.
 
 build CMakeTarget: phony CMakeTarget.exe
 
-build fmt: phony fmt/libfmtd.a
+build fmt: phony _deps/fmt-build/libfmtd.a
 
-build libfmtd.a: phony fmt/libfmtd.a
+build libfmtd.a: phony _deps/fmt-build/libfmtd.a
 
 # =============================================================================
 # Folder targets.
@@ -181,14 +181,14 @@ build libfmtd.a: phony fmt/libfmtd.a
 #############################################
 # Folder: C:/Users/Louis/CLionProjects/Simplex-Method-Calculator/cmake-build-debug
 
-build all: phony CMakeTarget.exe fmt/all
+build all: phony CMakeTarget.exe _deps/fmt-build/all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/Louis/CLionProjects/Simplex-Method-Calculator/cmake-build-debug/fmt
+# Folder: C:/Users/Louis/CLionProjects/Simplex-Method-Calculator/cmake-build-debug/_deps/fmt-build
 
-build fmt/all: phony fmt/libfmtd.a
+build _deps/fmt-build/all: phony _deps/fmt-build/libfmtd.a
 
 # =============================================================================
 # Built-in targets
@@ -197,14 +197,14 @@ build fmt/all: phony fmt/libfmtd.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeParseArguments.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckFlagCommonConfig.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/CMakeLists.txt C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/fmt/CMakeLists.txt C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/fmt/support/cmake/JoinPaths.cmake C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/fmt/support/cmake/cxx14.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeRCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeParseArguments.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FetchContent.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FetchContent/CMakeLists.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindGit.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckFlagCommonConfig.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeRCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake _deps/fmt-src/CMakeLists.txt _deps/fmt-src/support/cmake/JoinPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeParseArguments.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckFlagCommonConfig.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/CMakeLists.txt C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/fmt/CMakeLists.txt C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/fmt/support/cmake/JoinPaths.cmake C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/fmt/support/cmake/cxx14.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeRCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeParseArguments.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FetchContent.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FetchContent/CMakeLists.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindGit.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckFlagCommonConfig.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake C$:/Users/Louis/CLionProjects/Simplex-Method-Calculator/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeRCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake _deps/fmt-src/CMakeLists.txt _deps/fmt-src/support/cmake/JoinPaths.cmake: phony
 
 
 #############################################
