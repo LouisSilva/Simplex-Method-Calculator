@@ -7,7 +7,7 @@
 #include <string>
 
 struct constraint {
-    std::vector<char> l_coefficients;
+    std::vector<std::string> l_coefficients;
     std::vector<float> n_coefficients;
     std::string sign;
     float equal_to;
@@ -15,6 +15,8 @@ struct constraint {
 
 struct objective_function{
     std::string name;
-    std::vector<char> l_coefficients;
+    std::vector<std::string> l_coefficients;
     std::vector<float> n_coefficients;
 };
+
+std::vector<std::string> greek_letters = {"α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "κ", "λ", "μ", "ξ", "ρ", "τ", "φ", "χ", "ψ", "ω", "Γ", "Δ", "Θ", "Λ", "Ξ", "Π", "Σ", "σ", "ς", "Φ", "Ψ", "Ω"};
