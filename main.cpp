@@ -24,4 +24,9 @@ int main(){
     calc.convert_constraints();
     calc.print_constraints();
 
+    calc.set_objective_function("P", {"x", "y", "z"}, {3,4,5});
+    calc.rearrange_objective_function();
+    calc.print_objective_function();
+
     return 0;
+}

@@ -9,6 +9,7 @@
 #include <utility>
 #include <vector>
 #include <iostream>
+#include <fmt/core.h>
 
 class SimplexCalc{
 public:
@@ -49,7 +50,7 @@ public:
                 current_constraint.l_coefficients.push_back(greek_letters.at(i));
                 current_constraint.n_coefficients.push_back(1);
                 if(current_constraint.sign == ">="){
-                    current_constraint.l_coefficients.push_back(greek_letters.at(i));
+                    current_constraint.l_coefficients.push_back(greek_letters.at(30-i));
                     current_constraint.n_coefficients.push_back(-1);
                 }
                 current_constraint.sign = "=";
@@ -65,7 +66,19 @@ public:
         obj_func.n_coefficients = std::move(n_coefficients);
     }
 
-    objective_function get_objective_functions() const{
-        return obj_func;
+    void rearrange_objective_function(){
+        for(float & n_coefficient : obj_func.n_coefficients){
+            n_coefficient = n_coefficient * -1;
+        }
+    }
+
+    void print_objective_function(){
+        std::string str_const = "";
+        for(int i=0; i<obj_func.n_coefficients.size(); i++){
+            if(i != 0){str_const = str_const + " + ";}
+            str_const = str_const + std::to_string(obj_func.n_coefficients.at(i)) + obj_func.l_coefficients.at(i);
+        }
+        fmt::print("{0} + {1} = 0", obj_func.name, str_const);
+        std::cout << std::endl;
     }
 };
