@@ -1,5 +1,4 @@
 #include "SimplexCalc.h"
-#define FMT_HEADER_ONLY
 
 #include <vector>
 #include <string>
@@ -26,4 +25,3 @@ int main(){
     calc.print_constraints();
 
     return 0;
-}

@@ -1,24 +1,19 @@
-﻿# CMakeList.txt : CMake project for Simplex Method Calculator, include source and define
-# project specific logic here.
-#
-cmake_minimum_required (VERSION 3.14)
+cmake_minimum_required(VERSION 3.14)
+project(SimplexMethodCalculator)
 
-project ("Simplex Method Calculator")
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 include(FetchContent)
 
-# Add source to this project's executable.
-add_executable (CMakeTarget main.cpp s_vars.h SimplexCalc.h)
-
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
+add_executable(SimplexMethodCalculator main.cpp SimplexCalc.h s_vars.h)
 
 FetchContent_Declare(fmt
         GIT_REPOSITORY https://github.com/fmtlib/fmt.git
         GIT_TAG master)
-FETCHCONTENT_MAKEAVAILABLE(fmt)
+
+FetchContent_MakeAvailable(fmt)
+target_link_libraries(SimplexMethodCalculator fmt::fmt)
 
 include_directories(include)
-
-# TODO: Add tests and install targets if needed.

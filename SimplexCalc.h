@@ -5,7 +5,6 @@
 #endif //SIMPLEX_METHOD_CALCULATOR_SIMPLEXCALC_H
 
 #include "s_vars.h"
-#include "fmt/format.h"
 
 #include <utility>
 #include <vector>
