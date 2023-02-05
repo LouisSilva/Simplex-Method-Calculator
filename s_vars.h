@@ -5,18 +5,23 @@
 
 #include <vector>
 #include <string>
+#include <map>
 
 struct constraint {
-    std::vector<std::string> l_coefficients;
-    std::vector<float> n_coefficients;
+    std::map<std::string, float> coefficients;
     std::string sign;
     float equal_to;
 };
 
 struct objective_function{
     std::string name;
-    std::vector<std::string> l_coefficients;
-    std::vector<float> n_coefficients;
+    std::map<std::string, float> coefficients;
+};
+
+struct tableau{
+    std::vector<std::vector<float>> matrix;
+    std::vector<std::string> basic_variables;
+    std::vector<std::string> column_names;
 };
 
 std::vector<std::string> greek_letters = {"α", "β", "δ", "ε", "ζ", "η", "θ", "κ", "λ", "μ", "ξ", "ρ", "τ", "φ", "χ", "ψ", "ω", "Γ", "Δ", "Θ", "Λ", "Ξ", "Π", "Σ", "σ", "ς", "Φ", "Ψ", "Ω"};
